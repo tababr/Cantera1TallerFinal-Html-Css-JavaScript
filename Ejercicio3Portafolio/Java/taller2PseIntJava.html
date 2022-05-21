@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller1PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller1 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller2PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller2 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller3PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller3 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller4PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller4 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Taller 2-Condicionales</h1>
+            </div>
+            <div class="box-body">
+                <h3>Main Class:</h3>
+                <pre class="code">
+                <code>
+                    package com.sofka;
+
+                    import java.util.InputMismatchException;
+                    import java.util.Scanner;
+
+                    public class Main {
+
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                            boolean salir = false;
+                            Integer opcion;
+
+                            while (!salir) {
+                                System.out.println("Taller 2-Condicionales");
+                                System.out.println("1. Validar si es adulto");
+                                System.out.println("2. Validar si es un niño");
+                                System.out.println("3. Ingreso fiesta");
+                                System.out.println("4. Alquiler películas");
+                                System.out.println("5. Compra droguería");
+                                System.out.println("6. Taller motos");
+                                System.out.println("7. Indice de masa corporal");
+                                System.out.println("8. Pedidos pastelería");
+                                System.out.println("9. Areas geométricas");
+                                System.out.println("10. Banco");
+                                System.out.println("0. Salir");
+
+                                try {
+
+                                    System.out.println("Ingresa una de las opciones");
+                                    opcion = input.nextInt();
+
+                                    switch (opcion) {
+                                        case 1:
+                                            System.out.println("\n");
+                                            Edad edad = new Edad();
+                                            edad.Edad();
+                                            System.out.println("\n");
+                                            break;
+                                        case 2:
+                                            System.out.println("\n");
+                                            EdadNiño edadNiño = new EdadNiño();
+                                            edadNiño.EdadNiño();
+                                            System.out.println("\n");
+                                            break;
+                                        case 3:
+                                            System.out.println("\n");
+                                            Fiesta fiesta = new Fiesta();
+                                            fiesta.Fiesta();
+                                            System.out.println("\n");
+                                            break;
+                                        case 4:
+                                            System.out.println("\n");
+                                            VideoTienda videoTienda = new VideoTienda();
+                                            videoTienda.VideoTienda();
+                                            System.out.println("\n");
+                                            break;
+                                        case 5:
+                                            System.out.println("\n");
+                                            Drogueria drogueria = new Drogueria();
+                                            drogueria.Drogueria();
+                                            System.out.println("\n");
+                                            break;
+                                        case 6:
+                                            System.out.println("\n");
+                                            Motocicleta motocicleta = new Motocicleta();
+                                            motocicleta.Motocicleta();
+                                            System.out.println("\n");
+                                            break;
+                                        case 7:
+                                            System.out.println("\n");
+                                            Imc imc = new Imc();
+                                            imc.Imc();
+                                            System.out.println("\n");
+                                            break;
+                                        case 8:
+                                            System.out.println("\n");
+                                            Pasteleria pasteleria = new Pasteleria();
+                                            pasteleria.Pasteleria();
+                                            System.out.println("\n");
+                                            break;
+                                        case 9:
+                                            System.out.println("\n");
+                                            Geometria geometria = new Geometria();
+                                            geometria.Geometria();
+                                            System.out.println("\n");
+                                            break;
+                                        case 10:
+                                            System.out.println("\n");
+                                            Banco banco = new Banco();
+                                            banco.Banco();
+                                            System.out.println("\n");
+                                            break;
+                                        case 0:
+                                            salir = true;
+                                            break;
+
+                                        default:
+                                            System.out.println("\n");
+                                            System.out.println("Opción no valida");
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("\n");
+                                    System.out.println("Debes insertar un número");
+                                    input.next();
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+                <h3>Punto 1:</h3>
+                <p>"Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a
+                    18 años, deberá mostrar en pantalla: Usted es mayor de edad." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Edad.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 2:</h3>
+                <p>"Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18
+                    años, deberá mostrar en pantalla: Usted aún es un niño(a)." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/EdadNi%C3%B1o.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 3:</h3>
+                <p>"Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona
+                    es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor
+                    de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años,
+                    entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo
+                    tanto, no puede entrar a la fiesta, por favor devuélvase a su casa." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Fiesta.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 4:</h3>
+                <p>"La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el
+                    Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que
+                    adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar
+                    películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones
+                    sobre estas si se llegan a presentar daños u otra novedad sobre la película." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/VideoTienda.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 5:</h3>
+                <p>"La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para
+                    poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas
+                    características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para
+                    cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y
+                    devoluciones en caso de que se presenten." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Drogueria.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 6:</h3>
+                <p>"El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las
+                    respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a
+                    sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones
+                    por parte del cliente. También debe existir registro de salida del taller con las novedades y otra
+                    de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la
+                    motocicleta al entregarla." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Motocicleta.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 7:</h3>
+                <p>"La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice
+                    de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona
+                    encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer
+                    en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso)." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Imc.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 8:</h3>
+                <p>"El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita
+                    registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas
+                    características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la
+                    aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren
+                    diariamente." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Pasteleria.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 9:</h3>
+                <p>"El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de
+                    diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio
+                    solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si
+                    desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos
+                    necesarios para realizar cada cálculo y mostrar su respectivo resultado." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Geometria.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 10:</h3>
+                <p>"El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+                    aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los
+                    atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o
+                    consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el
+                    valor no puede ser mayor al valor que tiene en la cuenta." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/a2e1ee97b05c00cd635a5c249ad2df006c25025c/src/com/sofka/Banco.java">Link
+                        fragmento código</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

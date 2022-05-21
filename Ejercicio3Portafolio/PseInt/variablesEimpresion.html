@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VariablesEimpresion</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body onload="main()">
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./variablesEimpresion.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Variables e impresión
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./condicionales.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Condicionales
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./ciclos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Ciclos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./arreglos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Arreglos
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Java/index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Variables e impresion PseInt</h1>
+                <iframe src="https://www.youtube.com/embed/UM4y88E8hCw" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="box-body">
+                <h3>Punto 1:</h3>
+                <p>"Realizar un programa el cual solicite su nombre y apellidos"</p>
+                <pre class="code">
+                <code>
+                    Proceso capturaNombre
+                        Definir nombre Como Caracter;
+                        Definir apellido1 Como Caracter;
+                        Definir apellido2 Como Caracter;
+                        
+                        Escribir 'Ingresa nombre: ';
+                        Leer nombre;
+                        Escribir 'Ingresa apellido1: ';
+                        Leer apellido1;
+                        Escribir 'Ingresa apellido2: ';
+                        Leer apellido2;
+                        
+                        Limpiar Pantalla;
+                        
+                        Escribir 'Nombre completo: ', nombre,' ',apellido1,' ',apellido2;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 2:</h3>
+                <p>"Realizar un programa el cual solicite su nombre, apellidos, edad y estatura"</p>
+                <pre class="code">
+                <code>
+                    Proceso capturaNombreAtributos
+                        Definir nombre Como Caracter;
+                        Definir apellido1 Como Caracter;
+                        Definir apellido2 Como Caracter;
+                        Definir edad Como Entero;
+                        Definir estatura Como Real;
+                        
+                        Escribir 'Ingresa nombre: ';
+                        Leer nombre;
+                        Escribir 'Ingresa apellido1: ';
+                        Leer apellido1;
+                        Escribir 'Ingresa apellido2: ';
+                        Leer apellido2;
+                        Escribir 'Ingresa edad: ';
+                        Leer edad;
+                        Escribir 'Ingresa estatura: ';
+                        Leer estatura;
+                        
+                        Limpiar Pantalla;
+                        
+                        Escribir 'Usuario ingresado correctamente: ', nombre,' ',apellido1,' ',apellido2;
+                        Escribir 'Su edad es: ', edad, ' y estatura: ', estatura, ' mt.';
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 3:</h3>
+                <p>"Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y
+                    apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo
+                    [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre]"</p>
+                <pre class="code">
+                <code>
+                    Proceso capturaNombreFamiliar
+                        Definir nombre Como Caracter;
+                        Definir nombreP Como Caracter;
+                        Definir nombreM Como Caracter;
+                        Definir apellido1 Como Caracter;
+                        Definir apellido2 Como Caracter;
+                        Definir apellidoP1 Como Caracter;
+                        Definir apellidoP2 Como Caracter;
+                        Definir apellidoM1 Como Caracter;
+                        Definir apellidoM2 Como Caracter;
+                    
+                        Escribir 'Ingresa nombre: ';
+                        Leer nombre;
+                        Escribir 'Ingresa primer apellido: ';
+                        Leer apellido1;
+                        Escribir 'Ingresa segundo apellido: ';
+                        Leer apellido2;
+                        
+                        Escribir 'Ingresa el nombre de su padre: ';
+                        Leer nombreP;
+                        Escribir 'Ingresa primer apellido: ';
+                        Leer apellidoP1;
+                        Escribir 'Ingresa segundo apellido: ';
+                        Leer apellidoP2;
+                    
+                        Escribir 'Ingresa el nombre de su madre: ';
+                        Leer nombreM;
+                        Escribir 'Ingresa primer apellido: ';
+                        Leer apellidoM1;
+                        Escribir 'Ingresa segundo apellido: ';
+                        Leer apellidoM2;
+                        
+                        Limpiar Pantalla;
+                        
+                        Escribir 'Yo ', nombre,' ',apellido1,' ',apellido2, ' soy hijo de ', nombreP,' ',
+                        apellidoP1,' ', apellidoP2,' y ', nombreM,' ', apellidoM1,' ', apellidoM2;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 4:</h3>
+                <p>"Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe
+                    imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país
+                    [Nombre del País]"</p>
+                <pre class="code">
+                <code>
+                    Proceso capturaCiudadPais
+                        Definir ciudadCapital Como Caracter;
+                        Definir pais Como Caracter;
+                        
+                        Escribir 'Por favor ingresa una ciudad capital: ';
+                        Leer ciudadCapital;
+                        Escribir 'Por favor ingresa un pais: ';
+                        Leer pais;
+                        
+                        Escribir 'La ciudad de ', ciudadCapital,' es la capital de ', pais;
+                    FinProceso
+                </code>
+            </pre>
+            <h3>Punto 5:</h3>
+                <p>"Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de
+                    mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente
+                    mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de
+                    edad y [Nombre Completo] es actualmente su dueño(a)"</p>
+                <pre class="code">
+                <code>
+                    Proceso capturaMascota
+                        Definir nombreMascota Como Caracter;
+                        Definir edadMascota Como Entero;
+                        Definir tipoMascota Como Caracter;
+                        Definir nombreCompleto Como Caracter;
+                        
+                        Escribir 'Bienvenido a la veterinaria HappyAnimal !';
+                        
+                        Escribir 'Ingresa el nombre de la mascota:';
+                        leer nombreMascota;
+                        
+                        Escribir 'Ingresa la edad de la mascota:';
+                        Leer edadMascota;
+                        
+                        Escribir 'Ingresa el tipo de mascota (perro, gato, ave, etc...)';
+                        Leer tipoMascota;
+                        
+                        Escribir 'Por favor ingresa tu nombre completo:';
+                        Leer nombreCompleto;
+                        
+                        Escribir nombreMascota,' es un(a) ', tipoMascota,', el cual tiene ', edadMascota,'
+                        años de edad y ', nombreCompleto,' es actualmente su dueño(a) ';
+                    FinProceso
+                </code>
+            </pre>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

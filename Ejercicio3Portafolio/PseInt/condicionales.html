@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./variablesEimpresion.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Variables e impresión
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./condicionales.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Condicionales
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./ciclos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Ciclos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./arreglos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Arreglos
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Java/index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Explicación punto 7</h1>
+                <iframe src="https://www.youtube.com/embed/oAlkdrU9gwM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="box-body">
+                <h3>Punto 1:</h3>
+                <p>"Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a
+                    18 años, deberá mostrar en pantalla: Usted es mayor de edad."</p>
+                <pre class="code">
+                <code>
+                    Proceso edadPersona
+                        Definir nombre Como Caracter;
+                        Definir edad Como Entero;
+                        
+                        Escribir 'Ingresa tu nombre:';
+                        leer nombre;
+                        Escribir 'Ingresa tu edad:';
+                        leer edad;
+                        
+                        Si edad >= 18 Entonces
+                            Escribir nombre,' usted es mayor de edad';
+                        SiNo
+                            Escribir nombre,' usted es menor de edad';
+                        FinSi
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 2:</h3>
+                <p>"Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18
+                    años, deberá mostrar en pantalla: Usted aún es un niño(a)."</p>
+                <pre class="code">
+                <code>
+                    Proceso edadPersonaStatus
+                        Definir nombre Como Caracter;
+                        Definir edad Como Entero;
+                        
+                        Escribir 'Ingresa tu nombre:';
+                        leer nombre;
+                        Escribir 'Ingresa tu edad:';
+                        leer edad;
+                        
+                        Si edad < 18 Entonces
+                            Escribir nombre,' usted es un(a) niño(a)';
+                        SiNo
+                            Escribir nombre,' usted es un(a) adulto(a)';
+                        FinSi
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 3:</h3>
+                <p>"Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona
+                    es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor
+                    de edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años,
+                    entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo
+                    tanto, no puede entrar a la fiesta, por favor devuélvase a su casa."</p>
+                <pre class="code">
+                <code>
+                    Proceso validacionFiesta
+                        Definir nombre Como Caracter;
+                        Definir apellido1 Como Caracter;
+                        Definir apellido2 Como Caracter;
+                        Definir edad Como Entero;
+                        
+                        Escribir 'Ingresa tu nombre:';
+                        Leer nombre;
+                        Escribir 'Ingresa tu primer apellido:';
+                        Leer apellido1;
+                        Escribir 'Ingresa tu segundo apellido:';
+                        Leer apellido2;
+                        Escribir 'Ingresa tu edad:';
+                        Leer edad;
+                        
+                        Si edad >= 18 Entonces
+                            Escribir nombre,' ',apellido1,' ', apellido2,' usted es mayor de edad,
+                            puede entrar a la fiesta';
+                        SiNo
+                            Escribir nombre,' ',apellido1,' ', apellido2,' usted es menor de edad,
+                            no puede entrar a la fiesta';
+                        FinSi
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 4:</h3>
+                <p>"La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el
+                    Porvenir, requiere de una aplicación que permita registrar el alquiler de las películas que
+                    adquieren sus usuarios. Para cada usuario se debe permitir la opción de alquilar película, consultar
+                    películas disponibles y recibir película en la video tienda con la opción de realizar anotaciones
+                    sobre estas si se llegan a presentar daños u otra novedad sobre la película."</p>
+                <pre class="code">
+                <code>
+                    Proceso alquilerPeliculas
+                        Definir nombrePelicula Como Caracter;
+                        Definir pelicula0 Como Caracter;
+                        Definir pelicula1 Como Caracter;
+                        Definir pelicula2 Como Caracter;
+                        Definir novedad Como Caracter;
+                        Definir nombreCliente Como Caracter;
+                        Definir numeroContacto Como Entero;
+                        Definir numeroTarjeta Como Real;
+                        Definir opcion Como Entero;
+                        
+                        pelicula0 <- 'Fenix';
+                        pelicula1 <- 'Matrix';
+                        pelicula2 <- 'Lucy';
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido a PelisPorvenir';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Películas disponibles';
+                            Escribir '2. Alquilar película';
+                            Escribir '3. Devolver película en la video tienda';
+                            Escribir '4. Confirmar alquiler de la película';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir 'Actualmente tenemos 3 películas disponibles:';
+                                    Escribir '1.', pelicula0;
+                                    Escribir '2.', pelicula1;
+                                    Escribir '3.', pelicula2;
+                                    Escribir '';
+                                    Escribir 'Ingresa en Alquilar película para continuar con el proceso';
+                                2:	
+                                    Escribir 'Nombre de la película:';
+                                    Leer nombrePelicula;
+                                    Si ((nombrePelicula = pelicula0) O (nombrePelicula = pelicula1) 
+                                    O (nombrePelicula = pelicula2)) Entonces
+                                        
+                                        Escribir 'Digita tu nombre:';
+                                        leer nombreCliente;
+                                        
+                                        Escribir 'Digita tu número de contacto';
+                                        leer numeroContacto;
+                                        
+                                        Escribir 'Digita tu número de tarjeta';
+                                        leer numeroTarjeta;
+                                        
+                                        Escribir 'Los datos nombre de la película: ', nombrePelicula,
+                                        ', nombre: ', nombreCliente, ', número de contacto: ', 
+                                        numeroContacto,', número de tarjeta: ', numeroTarjeta, 
+                                        ' se registraron satisfactoriamente.';
+                                    SiNo
+                                        Escribir 'Lo sentimos, la película no esta disponible en 
+                                        el momento.';
+                                    FinSi
+                                3:
+                                    Escribir 'Por favor ingresa el nombre de la película a devolver:';
+                                    Leer nombrePelicula;
+                                    
+                                    Si ((nombrePelicula = pelicula0) O (nombrePelicula = pelicula1) 
+                                    O (nombrePelicula = pelicula2)) Entonces
+                                        
+                                        Escribir 'Indica si la película presenta daños u otra novedad';
+                                        leer novedad;
+                                        
+                                        Escribir 'La película ', nombrePelicula,' a sido devuelta 
+                                        satisfactoriamente';
+                                    SiNo
+                                        Escribir 'La película no fue alquilada en nuestra tienda';
+                                    FinSi
+                                4:
+                                    Escribir 'La película ',nombrePelicula, ' a sido alquilada 
+                                    satisfactoriamente';			
+                                    
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 5:</h3>
+                <p>"La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para
+                    poder facturar los productos que vende a sus clientes y para ello, los productos tienen unas
+                    características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para
+                    cada cliente, se tienen las opciones de compra de producto, consulta de precios por producto y
+                    devoluciones en caso de que se presenten."</p>
+                <pre class="code">
+                <code>
+                    Proceso productosDrogueria
+                        Definir descripcionPro0 Como Caracter;
+                        Definir descripcionPro1 Como Caracter;
+                        Definir descripcionPro2 Como Caracter;
+                        Definir nombreProducto Como Caracter;
+                        Definir nombreCliente Como Caracter;
+                        Definir producto0 Como Caracter;
+                        Definir producto1 Como Caracter;
+                        Definir producto2 Como Caracter;
+                        Definir novedad Como Caracter;
+                        Definir numeroContacto Como Entero;
+                        Definir numeroTarjeta Como Entero;
+                        Definir opcion Como Entero;	
+                        Definir precioPro0 Como Real;
+                        Definir precioPro1 Como Real;
+                        Definir precioPro2 Como Real;	
+                        
+                        
+                        producto0 <- 'Calmidol';
+                        precioPro0 <- 6500;
+                        descripcionPro0 <- 'Analgesico que actúa en contra de los dolores y cólicos 
+                        menstruales.';
+                        
+                        producto1 <- 'Dulcolax';
+                        precioPro1 <- 22300;
+                        descripcionPro1 <- 'Laxante y estimulante en el tratamiento del estreñimiento 
+                        y la evacuación del colon.';
+                        
+                        producto2 <- 'Preservativo';
+                        precioPro2 <- 12900;
+                        descripcionPro2 <- 'Preservativo ayuda a prevenir el embarazo y reducir el 
+                        riesgo de infecciones de transmicion sexual.';
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido a Drogueria Mi Salud';
+                            Escribir '';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Consulta productos';
+                            Escribir '2. Compra producto';
+                            Escribir '3. Devolución de producto';
+                            Escribir '4. Confirmar pago del producto';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:			
+                                    Escribir 'Productos disponibles:';
+                                    Escribir '1.', producto0,', Precio: ', precioPro0,', Descripción: 
+                                    ', descripcionPro0;
+                                    Escribir '';
+                                    Escribir '2.', producto1,', Precio: ', precioPro1,', Descripción: 
+                                    ', descripcionPro1;
+                                    Escribir '';
+                                    Escribir '3.', producto2,', Precio: ', precioPro2,', Descripción: 
+                                    ', descripcionPro2;
+                                    Escribir '';
+                                2:
+                                    Escribir Sin Saltar 'Digite el producto a comprar:';
+                                    Leer nombreProducto;
+                                    Si ((nombreProducto = producto0) O (nombreProducto = producto1) 
+                                    O (nombreProducto = producto2)) Entonces
+                                        
+                                            Escribir Sin Saltar'Digita tu nombre:';
+                                            leer nombreCliente;
+                                        
+                                            Escribir Sin Saltar'Digita tu número de contacto';
+                                            leer numeroContacto;
+                                        
+                                            Escribir Sin Saltar'Digita tu número de tarjeta';
+                                            leer numeroTarjeta;
+                                        
+                                            Escribir 'Los datos han sido registrados: ', nombreProducto,
+                                            ', A nombre de: ', nombreCliente, ', número de contacto: ', 
+                                            numeroContacto, ', número de tarjeta: ', numeroTarjeta;
+                                        SiNo
+                                            Escribir 'Lo sentimos, el producto ingresado no esta 
+                                            disponible.';
+                                    FinSi
+                                3:
+                                    Escribir Sin Saltar 'Por favor ingresa el nombre del producto 
+                                    a devolver:';
+                                    Leer nombreProducto;
+                                    
+                                    Si ((nombreProducto = producto0) O (nombreProducto = producto1) 
+                                    O (nombreProducto = producto2)) Entonces
+                                        
+                                        Escribir Sin Saltar 'Indica la novedad de la devolución';
+                                        leer novedad;
+                                        
+                                        Escribir 'El producto ', nombreProducto,' a sido devuelto 
+                                        satisfactoriamente ', ' con novedad: ', novedad;
+                                    SiNo
+                                        Escribir 'No se registra compra del producto ingresado';
+                                    FinSi
+                                4:
+                                    Escribir 'El pago del producto ',nombreProducto, ' se realizo 
+                                    correctamente';			
+                                    
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 6:</h3>
+                <p>"El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las
+                    respectivas revisiones y requiere una aplicación que le permita registrar los servicios generados a
+                    sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones
+                    por parte del cliente. También debe existir registro de salida del taller con las novedades y otra
+                    de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios repuestos en la
+                    motocicleta al entregarla."</p>
+                <pre class="code">
+                <code>
+                    Proceso historialMotocicletas
+                        Definir fechaEntrada Como Caracter;
+                        Definir fechaSalida Como Caracter;
+                        Definir observacion0 Como Caracter;
+                        Definir novedades Como Caracter;
+                        Definir marcaM0 Como Caracter;
+                        Definir cantidadMotocicletas Como Entero;
+                        Definir opcion Como Entero;
+                        Definir mecanico Como Caracter;
+                        Definir nombrePropietario Como Caracter;
+                        Definir idPropietario Como Entero;
+                        Definir numeroContactoPro Como Entero;
+                        Definir marcaRetiro Como Caracter;
+                        
+                        mecanico <- 'Jorge Robledo';
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido al taller [El maquinista]';
+                            Escribir '';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Registro ingreso motocicleta';
+                            Escribir '2. Registro salida motocicleta';
+                            Escribir '3. Historial arreglo por mecánico';
+                            Escribir '4. Confirmar salida del sistema';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir 'Solo se pueden ingresar una moto por persona';
+                                    Escribir 'Ingresa la cantidad de motos a ingresar al taller:';
+                                    Leer cantidadMotocicletas;
+                                    
+                                    Si cantidadMotocicletas = 1 Entonces
+                                        Escribir Sin Saltar 'Fecha de ingreso:';
+                                        Leer fechaEntrada;
+                                        
+                                        Escribir Sin Saltar 'Marca de la motocicleta:';
+                                        Leer marcaM0;
+                                        
+                                        Escribir Sin Saltar 'Ingresa nombre del propietario:';
+                                        Leer nombrePropietario;
+                                        
+                                        Escribir Sin Saltar 'Id del propietario:';
+                                        Leer idPropietario;
+                                        
+                                        Escribir Sin Saltar 'Número de contacto del propietario:';
+                                        Leer numeroContactoPro;
+                                        
+                                        Escribir Sin Saltar 'Observaciones del propietario:';
+                                        Leer observacion0;
+                                        Escribir '';
+                                        Escribir 'La motocicleta a sido ingresada al taller el día: 
+                                        ', fechaEntrada;
+                                    SiNo
+                                            Escribir 'La cantidad de motos a ingresar supera el limite 
+                                            establecido';
+                                    FinSi				
+                                2:
+                                    Escribir 'Indica la marca de la motocicleta a retirar:';
+                                    Leer marcaRetiro;
+                                    Si marcaRetiro = marcaM0 Entonces
+                                        Escribir Sin Saltar 'Indica la fecha de salida:';
+                                        Leer fechaSalida;
+                                        Escribir Sin Saltar 'Digita las novedades si existen:';
+                                        Leer novedades;
+                                        Escribir '';
+                                        Escribir Sin Saltar 'La motocicleta ', marcaRetiro, ' a sido 
+                                        retirada del taller el día ',fechaSalida,' con novedad de: 
+                                        ', novedades;
+                                    SiNo
+                                        Escribir 'La motocicleta no se ingreso a nuestro taller';
+                                    FinSi
+                                3:
+                                    Si cantidadMotocicletas = 1 Entonces
+                                        Escribir ' Él mecánico ',mecanico, ' reparo ', 
+                                        cantidadMotocicletas, 
+                                        ' motocicleta(s) el día de hoy.';
+                                        Escribir '';
+                                        Escribir 'Arreglos echo por el mecánico: ', mecanico;
+                                        Escribir novedades;
+                                    FinSi
+                                    
+                                4:	
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;
+                        
+                    FinProceso                
+                </code>
+            </pre>
+                <h3>Punto 7:</h3>
+                <p>"La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice
+                    de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para cada persona
+                    encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer
+                    en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso)."</p>
+                <pre class="code">
+                <code>
+                    Proceso calculoImc
+                        Definir peso Como Real;
+                        Definir altura Como Real;
+                        Definir resultado Como Real;
+                        Definir bajoPeso Como Real;
+                        Definir normal Como Real;
+                        Definir sobrepeso Como Real;
+                        Definir obeso Como Real;
+                    
+                        bajoPeso <- 18.5;
+                        normal <- 24.9;
+                        sobrepeso <- 29.9;
+                        obeso <- 30;
+                        
+                        Escribir 'Bienvenido al IMC de la secretaría de salud';
+                        Escribir Sin Saltar 'Ingresa tu peso:';
+                        Leer peso;
+                        Escribir Sin Saltar 'Ingresa tu altura:';
+                        Leer altura;
+                        resultado <-(peso/(altura^2));
+                        Escribir 'Su indice de masa corporal es: ',resultado;
+                        ;
+                        
+                        Si resultado < bajoPeso Entonces
+                            Escribir 'Esta bajo de peso';
+                        SiNo
+                            Si resultado > bajoPeso Y resultado < normal Entonces
+                                Escribir 'Tu peso es normal';
+                            SiNo
+                                Si resultado > normal Y resultado < sobrepeso Entonces
+                                    Escribir 'Tienes sobrepeso';
+                                SiNo
+                                    Escribir 'Tienes obesidad';
+                                FinSi
+                            FinSi
+                        FinSi	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 8:</h3>
+                <p>"El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita
+                    registrar los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas
+                    características propias como sabor, cantidad (porciones) y decoraciones). Se requiere que la
+                    aplicación permita registrar los pedidos, las tortas disponibles y las ventas que se registren
+                    diariamente."</p>
+                <pre class="code">
+                <code>
+                    Proceso pedidoTortas
+                        Definir nombrePedido Como Caracter;
+                        Definir nombre0 Como Caracter;
+                        Definir nombre1 Como Caracter;
+                        Definir precio0 Como Entero;
+                        Definir precio1 Como Entero;
+                        Definir sabor0 Como Caracter;
+                        Definir sabor1 Como Caracter;
+                        Definir cantidadPorciones0 Como Entero;
+                        Definir cantidadPorciones1 Como Entero;
+                        Definir decoracion0 Como Caracter;
+                        Definir decoracion1 Como Caracter;
+                        Definir opcion Como Entero;
+                        Definir cantidadPedido Como Entero;
+                        Definir nombreCliente Como Caracter;
+                        Definir total Como Entero;
+                        
+                        nombre0 <- 'Torta remojada';
+                        precio0 <- 47700;
+                        sabor0 <- 'Tres leches';
+                        cantidadPorciones0 <- 20;
+                        decoracion0 <- 'Decoración infantil (marvel o disney)';
+                        
+                        nombre1 <- 'Torta fría';
+                        precio1 <- 24800;
+                        sabor1 <- 'Maracuya';
+                        cantidadPorciones1 <- 12;
+                        decoracion1 <- 'Decoración redes sociales o familiar';
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido a la panaderia de Don Carlos';
+                            Escribir '';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Catálogo de tortas';
+                            Escribir '2. Hacer pedido';
+                            Escribir '3. Ventas del día';
+                            Escribir '4. Confirmar salida del sistema';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:	
+                                    Escribir 'Tortas disponibles';
+                                    Escribir '';
+                                    Escribir 'Descripción: ',nombre0;
+                                    Escribir 'Precio: ',precio0;
+                                    Escribir 'Sabor: ', sabor0;
+                                    Escribir 'Porciones: ',cantidadPorciones0;
+                                    Escribir 'Decoración: ', decoracion0;
+                                    Escribir '';
+                                    Escribir 'Descripción: ',nombre1;
+                                    Escribir 'Precio: ',precio1;
+                                    Escribir 'Sabor: ', sabor1;
+                                    Escribir 'Porciones: ',cantidadPorciones1;
+                                    Escribir 'Decoración: ', decoracion1;
+                                    Escribir '';
+                                    Escribir 'En la opción dos puede realizar el pedido';
+                                2:
+                                    Escribir Sin Saltar '¿Cuantas tortas se añadiran al pedido?, 
+                                    solo dos por pedido';
+                                    Leer cantidadPedido;
+                                    Escribir Sin Saltar 'Ingresa el nombre de la torta que quiere llevar';
+                                    leer nombrePedido;
+                                    
+                                    Si nombrePedido = nombre0 Y cantidadPedido = 1 Entonces
+                                        Escribir Sin Saltar 'Nombre del cliente:';
+                                        Leer nombreCliente;
+                                        total <- precio0;
+                                        Escribir 'El total del pedido es de: ', total,' pesos ';
+                                    SiNo
+                                        Si nombrePedido = nombre1 Y cantidadPedido = 2 Entonces
+                                            Escribir Sin Saltar 'Nombre del cliente:';
+                                            Leer nombreCliente;
+                                            total <- precio1+precio1;
+                                            Escribir'El total del pedido es de: ', total,' pesos ';
+                                        SiNo
+                                            Escribir 'El nombre de torta ingresada no esta disponible';
+                                        FinSi
+                                    FinSi
+                                3:
+                                    Escribir 'Hoy se vendieron ', cantidadPedido,' torta(s)';
+                                4:	
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 9:</h3>
+                <p>"El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de
+                    diferentes figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio
+                    solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si
+                    desea calcular el área de un rectángulo, triángulo o trapecio. No olvide solicitar los datos
+                    necesarios para realizar cada cálculo y mostrar su respectivo resultado."</p>
+                <pre class="code">
+                <code>
+                    Proceso areaGeometrica
+                        Definir base0 Como Real;
+                        Definir base1 Como Real;
+                        Definir altura Como Real;
+                        Definir area Como Real;
+                        Definir opcion Como Entero;
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido a geometría';
+                            Escribir '';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Calcular área de un rectángulo';
+                            Escribir '2. Calcular área de un triángulo';
+                            Escribir '3. Calcular área de un trapecio';
+                            Escribir '4. Confirmar salida del sistema';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:	
+                                    Escribir 'Rectángulo: ';
+                                    Escribir Sin Saltar 'Ingrese la base:';
+                                    Leer base0;
+                                    Escribir Sin Saltar 'Ingrese la altura';
+                                    Leer altura;
+                                    area <- base0*altura;
+                                    Escribir '';
+                                    Escribir 'El área del rectángulo es de: ', area,' cm^2';
+                                2:
+                                    Escribir 'Triángulo: ';
+                                    Escribir Sin Saltar 'Ingrese la base:';
+                                    Leer base0;
+                                    Escribir Sin Saltar 'Ingrese la altura';
+                                    Leer altura;
+                                    area <- (base0*altura)/2;
+                                    Escribir '';
+                                    Escribir 'El área del triángulo es de: ', area,' cm^2';
+                                3:
+                                    Escribir 'Trapecio: ';
+                                    Escribir Sin Saltar 'Ingrese la primer base:';
+                                    Leer base0;
+                                    Escribir Sin Saltar 'Ingrese la segunda base:';
+                                    Leer base1;
+                                    Escribir Sin Saltar 'Ingrese la altura';
+                                    Leer altura;
+                                    area <- ((base0+base1)*altura)/2;
+                                    Escribir '';
+                                    Escribir 'El área del rectángulo es de: ', area,' cm^2';
+                                4:	
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 10:</h3>
+                <p>"El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una
+                    aplicación para llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los
+                    atributos titular y cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o
+                    consultas de valor. En los ingresos no se pueden insertar valores negativos y para los retiros el
+                    valor no puede ser mayor al valor que tiene en la cuenta."</p>
+                <pre class="code">
+                <code>
+                    Proceso cuentaBanco
+                        Definir titularConsulta Como Caracter;
+                        Definir titular Como Caracter;
+                        Definir cantidad Como Entero;
+                        Definir ingresos Como Entero;
+                        Definir retiros Como Entero;
+                        Definir saldo Como Entero;
+                        Definir opcion Como Entero;
+                        
+                        titular <- 'Guillermo López';
+                        cantidad <- 500000;
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido a Su Banco Fiel';
+                            Escribir '';
+                            Escribir 'Elige una opcion';
+                            Escribir '1. Realizar ingresos';
+                            Escribir '2. Realizar retiros';
+                            Escribir '3. Realizar consultas de valor';
+                            Escribir '4. Confirmar salida del sistema';
+                            Leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    Escribir 'Su saldo actual es de: ', cantidad;
+                                    Escribir '';
+                                    Escribir Sin Saltar 'Digitá el valor a ingresar:';
+                                    Leer ingresos;
+                                    
+                                    Si ingresos < 0 Entonces
+                                        Escribir 'El ingreso no puede ser negativo';
+                                    SiNo
+                                        Escribir 'Transacción exitosa';					
+                                    FinSi
+                                2:
+                                    Escribir Sin Saltar 'Digitá el valor a retirar:';
+                                    Leer retiros;
+                                    
+                                    Si retiros > cantidad Entonces
+                                        Escribir 'Lo sentimos, su cuenta no puede quedar en 0';
+                                    FinSi
+                                3:
+                                    Escribir 'Saldo disponible: ', cantidad;
+                                    saldo <- ingresos+cantidad;
+                                    Escribir 'Saldo disponible con ingresos: ', saldo;
+                                    Escribir '';
+                                    saldo <- (cantidad-retiros);
+                                    Escribir 'Saldo disponible con retiros: ',saldo;
+                                4:
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;	
+                    FinProceso
+                </code>
+            </pre>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

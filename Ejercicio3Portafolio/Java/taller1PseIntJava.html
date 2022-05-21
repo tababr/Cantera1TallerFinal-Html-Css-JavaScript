@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="../PseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller1PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller1 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller2PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller2 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller3PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller3 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller4PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller4 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Taller 1-Variables e impresión</h1>
+            </div>
+            <div class="box-body">
+                <h3>Main Class:</h3>
+                <pre class="code">
+                <code>
+                    package com.sofka;
+
+                    import java.util.InputMismatchException;
+                    import java.util.Scanner;
+
+                    public class Main {
+
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                            boolean salir = false;
+                            Integer opcion;
+
+                            while (!salir) {
+                                System.out.println("Taller 1-Variables e impresión");
+                                System.out.println("1. Capturar datos persona");
+                                System.out.println("2. Capturar datos persona más extenso");
+                                System.out.println("3. Datos familia");
+                                System.out.println("4. Capital país");
+                                System.out.println("5. Datos mascota");
+                                System.out.println("6. Salir");
+
+                                try {
+
+                                    System.out.println("Ingresa una de las opciones");
+                                    opcion = input.nextInt();
+
+                                    switch (opcion) {
+                                        case 1:
+                                            System.out.println("\n");
+                                            Persona persona = new Persona();
+                                            persona.Persona();
+                                            System.out.println("\n");
+                                            break;
+                                        case 2:
+                                            System.out.println("\n");
+                                            DatosPersona datosPersona = new DatosPersona();
+                                            datosPersona.DatosPersona();
+                                            System.out.println("\n");
+                                            break;
+                                        case 3:
+                                            System.out.println("\n");
+                                            Familia familia = new Familia();
+                                            familia.Familia();
+                                            System.out.println("\n");
+                                            break;
+                                        case 4:
+                                            System.out.println("\n");
+                                            PaisCapital paisCapital = new PaisCapital();
+                                            paisCapital.PaisCapital();
+                                            System.out.println("\n");
+                                            break;
+                                        case 5:
+                                            System.out.println("\n");
+                                            Mascota mascota = new Mascota();
+                                            mascota.Mascota();
+                                            System.out.println("\n");
+                                            break;
+                                        case 6:
+                                            salir = true;
+                                            break;
+
+                                        default:
+                                            System.out.println("\n");
+                                            System.out.println("Opción no valida");
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("\n");
+                                    System.out.println("Debes insertar un número");
+                                    input.next();
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+                <h3>Punto 1:</h3>
+                <p>"Realizar un programa el cual solicite su nombre y apellidos" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/4e0db6ec605c29538ae0d5c31a5889b64959da53/src/com/sofka/Persona.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 2:</h3>
+                <p>"Realizar un programa el cual solicite su nombre, apellidos, edad y estatura" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/4e0db6ec605c29538ae0d5c31a5889b64959da53/src/com/sofka/DatosPersona.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 3:</h3>
+                <p>"Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y
+                    apellidos de su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo
+                    [Nombre Completo], soy hijo de [Nombre de la Madre] y [Nombre del Padre]"<a
+                        href="https://github.com/tababr/Cantera1Java/blob/4e0db6ec605c29538ae0d5c31a5889b64959da53/src/com/sofka/Familia.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 4:</h3>
+                <p>"Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe
+                    imprimir en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país
+                    [Nombre del País]"<a
+                        href="https://github.com/tababr/Cantera1Java/blob/4e0db6ec605c29538ae0d5c31a5889b64959da53/src/com/sofka/PaisCapital.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 5:</h3>
+                <p>"Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de
+                    mascota y su nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente
+                    mensaje: [Nombre de Mascota] es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de
+                    edad y [Nombre Completo] es actualmente su dueño(a)"<a
+                        href="https://github.com/tababr/Cantera1Java/blob/4e0db6ec605c29538ae0d5c31a5889b64959da53/src/com/sofka/Mascota.java">Link
+                        fragmento código</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

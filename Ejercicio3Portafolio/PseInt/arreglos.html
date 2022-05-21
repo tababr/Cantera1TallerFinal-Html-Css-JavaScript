@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./variablesEimpresion.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Variables e impresión
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./condicionales.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Condicionales
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./ciclos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Ciclos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./arreglos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Arreglos
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Java/index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Explicación punto 4</h1>
+                <iframe src="https://www.youtube.com/embed/BojwNCpNuBU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="box-body">
+                <h3>Punto 1:</h3>
+                <p>"Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario.
+                    Después de recoger toda la información, se requiere imprimir el índice de cada posición en el
+                    arreglo con su valor de la siguiente manera:"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto1Taller4.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso llenarVector
+                        Definir dato, indice Como Entero;
+                        Dimension dato[5];
+                        
+                        Para indice <- 0 Hasta 4 Con Paso 1 Hacer
+                            Escribir 'Ingresar número' Sin Saltar;
+                            Leer dato[indice];
+                        FinPara
+                        
+                        Para indice <- 0 Hasta 4 Con Paso 1 Hacer
+                            Escribir '[',indice,']',' = ', dato[indice];
+                        FinPara
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 2:</h3>
+                <p>"Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números
+                    aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer
+                    utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares"
+                </p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto2Taller4.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso aleatortioArreglo
+                        Definir dato, num, i Como Entero;
+                        Dimension dato[20];
+                        
+                        num<-0;
+                        Escribir 'Datos generados de 1-100 aleatoriamente:';
+                        Mientras  num <= 19 Hacer
+                            dato[num]<-azar(100)+1;
+                            Escribir dato[num],',' Sin Saltar;
+                            num <- num+1;
+                        FinMientras
+                        Escribir '';
+                        Escribir  '------------------------------------------------------------';
+                        Escribir 'Números pares:';
+                        Para num<-0 Hasta 19 Con Paso 1 Hacer
+                            Si dato[num] % 2 = 0 Entonces
+                                Escribir dato[num],',' Sin Saltar;
+                            FinSi		
+                        FinPara
+                        Escribir '';
+                        Escribir  '------------------------------------------------------------';
+                        Escribir 'Números impares:';
+                        Para num<-0 Hasta 19 Con Paso 1 Hacer
+                            Si dato[num] % 2 = 1 Entonces
+                                Escribir dato[num],',' Sin Saltar;
+                            FinSi		
+                        FinPara
+                        Escribir '';	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 3:</h3>
+                <p>"Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática."</p>
+                <pre class="code">
+                <code>
+                    Proceso numerosPrimos
+                        Definir x, contador, dato Como Entero;
+                        
+                        Para dato <- 1 hasta 1000 Hacer
+                            x<-1;
+                            contador<-0;
+                            
+                            Mientras x <= dato Hacer
+                                Si dato % x = 0 Entonces
+                                    contador<-contador+1;
+                                FinSi
+                                x<-x+1;
+                            FinMientras
+                            
+                            Si contador = 2 Entonces
+                                Escribir dato, ' es primo';
+                            FinSi
+                            
+                        FinPara
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 4:</h3>
+                <p>"Dada la siguiente matriz bidimensional, el cual debe de quemar en el código.</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4Taller4.png" alt="Punto 1">
+                </figure>
+                <p>"Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente
+                    matriz bidimensional."</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4.1Taller4.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso matrizBidimensional
+                        Definir  fila, columna Como Entero;
+                        Definir matriz Como Caracter;
+                        Dimension matriz[4,5];
+                        
+                        matriz[0,0]<-'01';
+                        matriz[0,1]<-'02';
+                        matriz[0,2]<-'03';
+                        matriz[0,3]<-'04';
+                        matriz[0,4]<-'05';
+                        //-----------//
+                        matriz[1,0]<-'06';
+                        matriz[1,1]<-'07';
+                        matriz[1,2]<-'08';
+                        matriz[1,3]<-'09';
+                        matriz[1,4]<-'10';
+                        //-----------//
+                        matriz[2,0]<-'11';
+                        matriz[2,1]<-'12';
+                        matriz[2,2]<-'13';
+                        matriz[2,3]<-'14';
+                        matriz[2,4]<-'15';
+                        //-----------//
+                        matriz[3,0]<-'16';
+                        matriz[3,1]<-'17';
+                        matriz[3,2]<-'18';
+                        matriz[3,3]<-'19';
+                        matriz[3,4]<-'20';
+                        
+                        Escribir 'Matriz original';
+                        Escribir '----------------';
+                        Para fila<-0 Hasta 3 Con Paso 1 Hacer
+                            Para columna<-0 Hasta 4 Con Paso 1 Hacer
+                                Escribir matriz[fila,columna],' ' Sin Saltar;
+                            FinPara
+                            Escribir '';
+                        FinPara
+                        Escribir '';
+                        Escribir 'Matriz en zigzag';
+                        Escribir '----------------';
+                        Para fila<-0 Hasta 3 Con Paso 1 Hacer
+                            Para columna<-0 Hasta 4 Con Paso 1 Hacer
+                                Si fila % 2 = 0 Entonces
+                                    Escribir matriz[fila,columna],' ' Sin Saltar;
+                                SiNo
+                                    Escribir matriz[fila, 4-columna], ' ' Sin Saltar;
+                                FinSi
+                            FinPara
+                            Escribir '';
+                        FinPara	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 5:</h3>
+                <p>"Se debe de imprimir el siguiente cuadro."</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto5Taller4.png" alt="Punto 1">
+                </figure>
+                <p>"El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada
+                    celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá
+                    a la fila y columna insertada por el usuario"</p>
+                <pre class="code">
+                <code>
+                    Proceso matrizOperaciones	
+                        Definir fila, columna, i, j,f,c Como Entero;
+                        Definir matriz, opcion Como Entero;
+                        Dimension matriz[10,10];
+                        Definir celda Como Caracter;
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir '                                ','COLUMNAS';
+                            Escribir '         ','0','     ','1','     ','2','     ','3','     ','4','   
+                             ','5','     ','6','     ','7','     ','8','     ','9';
+                            Escribir '==================================================================';
+                            Escribir 'F','   ','0','|','  ','1x1','   ','2x1','   ','3x1','   ','4x1','   
+                            ','5x1','   ','6x1','   ','7x1','   ','8x1','   ','9x1','  ','10x1';
+                            Escribir 'I','   ','1','|','  ','1x2','   ','2x2','   ','3x2','   ','4x2','   
+                            ','5x2','   ','6x2','   ','7x2','   ','8x2','   ','9x2','  ','10x2';
+                            Escribir 'L','   ','2','|','  ','1x3','   ','2x3','   ','3x3','   ','4x3','   
+                            ','5x3','   ','6x3','   ','7x3','   ','8x3','   ','9x3','  ','10x3';
+                            Escribir 'A','   ','3','|','  ','1x4','   ','2x4','   ','3x4','   ','4x4','   
+                            ','5x4','   ','6x4','   ','7x4','   ','8x4','   ','9x4','  ','10x4';
+                            Escribir 'S','   ','4','|','  ','1x5','   ','2x5','   ','3x5','   ','4x5','   
+                            ','5x5','   ','6x5','   ','7x5','   ','8x5','   ','9x5','  ','10x5';
+                            Escribir ' ','   ','5','|','  ','1x6','   ','2x6','   ','3x6','   ','4x6','   
+                            ','5x6','   ','6x6','   ','7x6','   ','8x6','   ','9x6','  ','10x6';
+                            Escribir ' ','   ','6','|','  ','1x7','   ','2x7','   ','3x7','   ','4x7','   
+                            ','5x7','   ','6x7','   ','7x7','   ','8x7','   ','9x7','  ','10x7';
+                            Escribir ' ','   ','7','|','  ','1x8','   ','2x8','   ','3x8','   ','4x8','   
+                            ','5x8','   ','6x8','   ','7x8','   ','8x8','   ','9x8','  ','10x8';
+                            Escribir ' ','   ','8','|','  ','1x9','   ','2x9','   ','3x9','   ','4x9','   
+                            ','5x9','   ','6x9','   ','7x9','   ','8x9','   ','9x9','  ','10x9';
+                            Escribir ' ','   ','9','|','  ','1x10','  ','2x10','  ','3x10','  ','4x10','  
+                            ','5x10','  ','6x10','  ','7x10','  ','8x10','  ','9x10',' ','10x10';
+                            Escribir '';
+                            Escribir 'Ingresa una posición para saber el resultado de la operación';
+                            Escribir 'Ejemplo: la posicíon [fila, columna]=2,5 donde seria la operacion 
+                            6x3 y el resultado 18';
+                            Escribir '';
+                            Escribir '1. Ingresar posición';
+                            Escribir '2. Salir del sistema';
+                            leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    celda <- " x ";	
+                                    Para i <- 0 Hasta 9 Con Paso 1 Hacer
+                                        Para j <- 0 hasta 9 Con Paso 1 Hacer
+                                            celda <- Concatenar(ConvertirATexto(j+1),celda);
+                                            celda <- Concatenar(celda , ConvertirATexto(i+1));
+                                            celda <- " x ";
+                                        FinPara
+                                    FinPara
+                                    
+                                    Para i <- 0 hasta 9 Con Paso 1 Hacer
+                                        Para j <- 0 hasta 9 Con Paso 1 Hacer
+                                            matriz[i,j] <- (i + 1) * (j + 1);
+                                        FinPara		
+                                    FinPara
+                                    
+                                    Escribir "";
+                                    Escribir 'Ingrese el número de la fila:';
+                                    Leer f;
+                                    Escribir 'Ingrese el número de la columna:';
+                                    Leer c;
+                                    
+                                    Para fila<-f Hasta 9 Con Paso 1 Hacer
+                                        Para columna<-c Hasta 9 Con Paso 1 Hacer
+                                            Limpiar Pantalla;
+                                            Escribir 'El resultado es: ', matriz[f,c], '' Sin Saltar;
+                                        FinPara
+                                        Escribir '';
+                                    FinPara				
+                                2:
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;		
+                        Hasta Que opcion=2;	
+                    FinProceso
+                </code>
+            </pre>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

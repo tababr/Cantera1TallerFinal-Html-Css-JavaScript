@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="../PseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller1PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller1 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller2PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller2 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller3PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller3 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller4PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller4 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Taller 4-Arreglos</h1>
+            </div>
+            <div class="box-body">
+                <h3>Main Class:</h3>
+                <pre class="code">
+                <code>
+                    package com.sofka;
+
+                    import java.util.InputMismatchException;
+                    import java.util.Scanner;
+
+                    public class Main {
+
+                        public static void main(String[] args) {
+
+                            Scanner input = new Scanner(System.in);
+                            boolean salir = false;
+                            Integer opcion;
+
+                            while (!salir) {
+                                System.out.println("Taller 2-Arreglos");
+                                System.out.println("1. Llenar vector");
+                                System.out.println("2. Números aleatorios");
+                                System.out.println("3. Números primos");
+                                System.out.println("4. Matriz en zigzag");
+                                System.out.println("5. Matriz operaciones");
+                                System.out.println("0. Salir");
+
+                                try {
+
+                                    System.out.println("Ingresa una de las opciones");
+                                    opcion = input.nextInt();
+
+                                    switch (opcion) {
+                                        case 1:
+                                            System.out.println("\n");
+                                            Vector vector = new Vector();
+                                            vector.Vector();
+                                            System.out.println("\n");
+                                            break;
+                                        case 2:
+                                            System.out.println("\n");
+                                            Aleatorio aleatorio = new Aleatorio();
+                                            aleatorio.Aleatorio();
+                                            System.out.println("\n");
+                                            break;
+                                        case 3:
+                                            System.out.println("\n");
+                                            Primos primos = new Primos();
+                                            primos.Primos();
+                                            System.out.println("\n");
+                                            break;
+                                        case 4:
+                                            System.out.println("\n");
+                                            BidimensionalMatriz bidimensionalMatriz = new BidimensionalMatriz();
+                                            bidimensionalMatriz.BidimensionalMatriz();
+                                            System.out.println("\n");
+                                            break;
+                                        case 5:
+                                            System.out.println("\n");
+                                            OperacionesMatriz operacionesMatriz = new OperacionesMatriz();
+                                            operacionesMatriz.OperacionesMatriz();
+                                            System.out.println("\n");
+                                            break;
+                                        case 0:
+                                            salir = true;
+                                            break;
+
+                                        default:
+                                            System.out.println("\n");
+                                            System.out.println("Opción no valida");
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("\n");
+                                    System.out.println("Debes insertar un número");
+                                    input.next();
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+                <h3>Punto 1:</h3>
+                <p>"Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario.
+                    Después de recoger toda la información, se requiere imprimir el índice de cada posición en el
+                    arreglo con su valor de la siguiente manera:" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/81f5913c51aba53bb47560373eff4bf0dd78ff84/src/com/sofka/Vector.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto1Taller4.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 2:</h3>
+                <p>"Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números
+                    aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer
+                    utilizando un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/81f5913c51aba53bb47560373eff4bf0dd78ff84/src/com/sofka/Aleatorio.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto2Taller4.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 3:</h3>
+                <p>"Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/81f5913c51aba53bb47560373eff4bf0dd78ff84/src/com/sofka/Primos.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 4:</h3>
+                <p>"Dada la siguiente matriz bidimensional, el cual debe de quemar en el código." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/81f5913c51aba53bb47560373eff4bf0dd78ff84/src/com/sofka/BidimensionalMatriz.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4Taller4.png" alt="Punto 1">
+                </figure>
+                <p>"Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente
+                    matriz bidimensional."</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4.1Taller4.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 5:</h3>
+                <p>"Se debe de imprimir el siguiente cuadro." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/81f5913c51aba53bb47560373eff4bf0dd78ff84/src/com/sofka/OperacionesMatriz.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto5Taller4.png" alt="Punto 1">
+                </figure>
+                <p>"El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada
+                    celda debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá
+                    a la fila y columna insertada por el usuario"</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

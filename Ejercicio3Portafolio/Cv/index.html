@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="./src/index.js"></script>
+</head>
+
+<body onload="main()">
+    <header>
+        <nav class="menu">
+            <div id="list-container">
+                <ul type="circle">
+                    <a href="./datosPersonales.html"><button class="btn" type="button"> Datos personales</button></a>
+                    <a href="./experienciaLaboral.html"><button class="btn" type="button"> Experiencia
+                            laboral</button></a>
+                    <a href="./estudiosRealizados.html"><button class="btn" type="button"> Estudios
+                            realizados</button></a>
+                    <a href="./referenciasPersonales.html"><button class="btn" type="button"> Referencias
+                            personales</button></a>
+                    <a href="./referenciasFamiliares.html"><button class="btn" type="button"> Referencias
+                            familiares</button></a>
+                    <a href="./assets/documents/Cv29032022TEST.pdf" download="Cv Brayan Tabares"><button class="btn"
+                            type="button">
+                            Descargar Hoja de vida PDF</button></a>                    
+                    <a href="../index.html"><button class="btn" type="button"> Portafolio</button></a>
+                    <a href="./index.html"><button class="btn" type="button"> Inicio</button></a>
+                </ul>
+                <div id="list-theme">
+                    <form>
+                        <legend id="select-theme">Elige un tema</legend>
+                        <input type="radio" id="default" class="default" name="grupo" value="default">
+                        <label>Default</label>
+                        <br/>
+                        <input type="radio" id="cian" class="cian" name="grupo" value="cian">
+                        <label>Cian</label>
+                        <br>
+                        <input type="radio" id="salmon" class="salmon" name="grupo" value="salmon">
+                        <label>Salmon</label>
+                        <br>
+                        <input type="radio" id="mostaza" class="mostaza" name="grupo" value="mostaza">
+                        <label>Mostaza</label>
+                    </form>
+                </div>                
+            </div>
+        </nav>
+    </header>
+    <section class="info">
+        <div id="info-container">
+            <div id="image-container">
+                <img src="assets/image/CV.jpg" />
+            </div>
+            <article>
+                <h1 id="name">Brayan Tabares Jiménez</h1>
+                <h2><i class="text">Perfil profesional </i></h2>
+                <p class="text">Profesional en ingeniería de sistemas
+                    y telecomunicaciones.<br> Con
+                    capacidad de dar, buscar, diseñar y
+                    probar soluciones<br> en el desarrollo de
+                    software.</p>
+            </article>
+        </div>
+    </section>
+    <section>
+        <div id="name-skill">
+            <h1>Habilidades</h1>
+        </div>
+        <div class="slider">
+            <div class="layer">
+                <div class="profile-card" style="--timer:-1;">
+                    <div class="details">
+                        <span class="name">Java</span>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                <div class="profile-card" style="--timer:0;">
+                    <div class="details">
+                        <span class="name">Metodologia Scrum</span>
+                        <p>Planificación de pruebas</p>
+                    </div>
+                </div>
+                <div class="profile-card" style="--timer:1;">
+                    <div class="details">
+                        <span class="name">Html</span>
+                        <p>Css</p>
+                    </div>
+                </div>
+                <div class="profile-card" style="--timer:2;">
+                    <div class="details">
+                        <span class="name">Sql</span>
+                        <p>Git</p>
+                    </div>
+                </div>
+                <div class="profile-card" style="--timer:2;">
+                    <div class="details">
+                        <span class="name">Jira</span>
+                        <p>Ux/Ui</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <section class="footer">
+            <p>&#169; 2022&#8211;05 <a>Brayan Tabares Jiménez</a></p>
+        </section>
+    </footer>
+</body>
+
+</html>

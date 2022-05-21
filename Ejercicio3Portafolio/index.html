@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="./src/index.js"></script>
+</head>
+
+<body onload="main()">
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="./pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./Java/index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="./Cv/Index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul class="logout">
+            <li>
+                <a href="https://www.linkedin.com/in/brayan-tabares-52a243b5">
+                    <i class="fa fa-linkedin-square fa-2x"></i>
+                    <span class="nav-text">
+                        By Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-info">
+        <div id="info-container">
+            <div id="image-container">
+                <img id="img" src="/Ejercicio3Portafolio/assets/CV.jpg" />
+            </div>
+            <article>
+                <h1 id="name">Brayan Tabares Jiménez</h1>
+                <p class="text">Profesional en Ingeniería de Sistemas
+                    y Telecomunicaciones.<br> Con
+                    capacidad de dar, buscar, diseñar y
+                    probar soluciones<br> en el desarrollo de
+                    software.</p>
+            </article>
+        </div>
+
+        <div id="list-theme">
+            <form>
+                <legend id="select-theme">Elige un tema</legend>
+                <input type="radio" id="default" class="default" name="grupo" value="default">
+                <label>Default</label>
+                <br/>
+                <input type="radio" id="cian" class="cian" name="grupo" value="cian">
+                <label>Cian</label>
+                <br>
+                <input type="radio" id="salmon" class="salmon" name="grupo" value="salmon">
+                <label>Salmon</label>
+                <br>
+                <input type="radio" id="mostaza" class="mostaza" name="grupo" value="mostaza">
+                <label>Mostaza</label>
+            </form>
+        </div>
+    </main> 
+</body>
+
+</html>

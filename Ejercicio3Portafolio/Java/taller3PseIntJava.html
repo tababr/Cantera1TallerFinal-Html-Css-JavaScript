@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller1PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller1 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="taller2PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller2 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller3PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller3 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="taller4PseIntJava.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Taller4 PseInt en Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Taller 3-Ciclos</h1>
+            </div>
+            <div class="box-body">
+                <h3>Main Class:</h3>
+                <pre class="code">
+                <code>
+                    package com.sofka;
+
+                    import java.util.InputMismatchException;
+                    import java.util.Scanner;
+
+                    public class Main {
+
+                        public static void main(String[] args) {
+                            Scanner input = new Scanner(System.in);
+                            boolean salir = false;
+                            Integer opcion;
+
+                            while (!salir) {
+                                System.out.println("Taller 2-Condicionales");
+                                System.out.println("1. Figura 1 (Ciclo For)");
+                                System.out.println("2. Figura 2 (Ciclo While)");
+                                System.out.println("3. Figura 3 (Ciclo Do while)");
+                                System.out.println("4. Tabla de multiplicar (Ciclo For)");
+                                System.out.println("5. Menu infinito");
+                                System.out.println("6. Contactos teléfonicos");
+                                System.out.println("7. Parqueadero");
+                                System.out.println("8. Escuela automovilística");
+                                System.out.println("0. Salir");
+
+                                try {
+
+                                    System.out.println("Ingresa una de las opciones");
+                                    opcion = input.nextInt();
+
+                                    switch (opcion) {
+                                        case 1:
+                                            System.out.println("\n");
+                                            Figura1 figura1 = new Figura1();
+                                            figura1.Figura1();
+                                            System.out.println("\n");
+                                            break;
+                                        case 2:
+                                            System.out.println("\n");
+                                            Figura2 figura2 = new Figura2();
+                                            figura2.Figura2();
+                                            System.out.println("\n");
+                                            break;
+                                        case 3:
+                                            System.out.println("\n");
+                                            Figura3 figura3 = new Figura3();
+                                            figura3.Figura3();
+                                            System.out.println("\n");
+                                            break;
+                                        case 4:
+                                            System.out.println("\n");
+                                            TablaMultiplicar tablaMultiplicar = new TablaMultiplicar();
+                                            tablaMultiplicar.TablaMultiplicar();
+                                            System.out.println("\n");
+                                            break;
+                                        case 5:
+                                            System.out.println("\n");
+                                            Menu menu = new Menu();
+                                            menu.Menu();
+                                            System.out.println("\n");
+                                            break;
+                                        case 6:
+                                            System.out.println("\n");
+                                            Contactos contactos = new Contactos();
+                                            contactos.Contactos();
+                                            System.out.println("\n");
+                                            break;
+                                        case 7:
+                                            System.out.println("\n");
+                                            Parqueadero parqueadero = new Parqueadero();
+                                            parqueadero.Parqueadero();
+                                            System.out.println("\n");
+                                            break;
+                                        case 8:
+                                            System.out.println("\n");
+                                            EscuelaAuto escuelaauto = new EscuelaAuto();
+                                            escuelaauto.escuelaAuto();
+                                            System.out.println("\n");
+                                            break;
+                                        case 0:
+                                            salir = true;
+                                            break;
+
+                                        default:
+                                            System.out.println("\n");
+                                            System.out.println("Opción no valida");
+                                    }
+                                } catch (InputMismatchException e) {
+                                    System.out.println("\n");
+                                    System.out.println("Debes insertar un número");
+                                    input.next();
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+                <h3>Punto 1:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Para" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Figura1.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto1.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 2:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Mientras - Hacer" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Figura2.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto2.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 3:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Figura3.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto3.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 4:</h3>
+                <p>"Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique
+                    por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea
+                    crear la tabla del 5, entonces el resultado debería ser el siguiente:" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/TablaMultiplicar.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 5:</h3>
+                <p>"Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee
+                    terminar dicho ciclo" <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Menu.java">Link
+                        fragmento código</a></p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto5.png" alt="Punto 1">
+                </figure>
+
+                <h3>Punto 6:</h3>
+                <p>"Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar
+                    contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo,
+                    teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el
+                    número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo
+                    requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Contactos.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 7:</h3>
+                <p>"El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del
+                    barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas
+                    instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y
+                    marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se
+                    debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un
+                    vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así
+                    lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/Parqueadero.java">Link
+                        fragmento código</a></p>
+
+                <h3>Punto 8:</h3>
+                <p>"La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes
+                    en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con
+                    el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su
+                    ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del
+                    curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo
+                    indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su
+                    totalidad." <a
+                        href="https://github.com/tababr/Cantera1Java/blob/70b8336b4e19ccb13270654e9fc93eadbe275fb4/src/com/sofka/EscuelaAuto.java">Link
+                        fragmento código</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

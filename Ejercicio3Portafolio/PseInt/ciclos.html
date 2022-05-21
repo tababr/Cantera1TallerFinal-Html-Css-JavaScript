@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+    <link href="/Ejercicio3Portafolio/css/style.css" rel="stylesheet" type="text/css">
+    <script src="../src/index.js"></script>
+</head>
+
+<body>
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="/Ejercicio3Portafolio/index.html">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="/Ejercicio3Portafolio/pseInt/index.html">
+                    <i class="fa fa-laptop fa-2x"></i>
+                    <span class="nav-text">
+                        PseInt
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./variablesEimpresion.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Variables e impresión
+                    </span>
+                </a>
+
+            </li>
+            <li class="has-subnav">
+                <a href="./condicionales.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Condicionales
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./ciclos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Ciclos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="./arreglos.html">
+                    <i class="fa fa-arrow-right-2x"></i>
+                    <span class="nav-text">
+                        Arreglos
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Java/index.html">
+                    <i class="fa fa-code fa-2x"></i>
+                    <span class="nav-text">
+                        Java
+                    </span>
+                </a>
+            </li>
+            <li class="has-subnav">
+                <a href="../Cv/index.html">
+                    <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">
+                        Cv Brayan Tabares
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <div class="box-header with-border">
+                <h1 class="box-title">Explicación punto 6</h1>
+                <iframe src="https://www.youtube.com/embed/iYm-kYgBJQI"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="box-body">
+                <h3>Punto 1:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Para"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto1.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso cicloParaFigura
+                        Definir inicio Como Entero;
+                        Definir asterisco Como Entero;
+                        
+                        Para inicio <-1 Hasta 10 Hacer
+                            Para asterisco <- 1 Hasta inicio Hacer
+                                Escribir Sin Saltar '*';
+                            FinPara
+                            Escribir '';
+                        FinPara
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 2:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Mientras - Hacer"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto2.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso cicloMientrasFiguraInvertida
+                        Definir global Como Entero;
+                        Definir espacio Como Entero;
+                        Definir asterisco Como Entero;
+                        
+                        global <- 10;
+                        
+                        Mientras global >= 1 Hacer
+                            espacio <- 1;
+                            Mientras espacio <= global hacer			
+                                Escribir Sin Saltar " " ;
+                                espacio <- espacio+1;
+                            FinMientras
+                            
+                            asterisco <- 10;
+                            Mientras asterisco >= global Hacer
+                                Escribir  "*" Sin Saltar;
+                                asterisco <- asterisco-1;
+                            FinMientras
+                            
+                            Escribir "";
+                            global <- global - 1;		
+                        FinMientras	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 3:</h3>
+                <p>"Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto3.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso cicloRepetirArbol	
+                        Definir f Como Entero;
+                        Definir c Como Entero;
+                        Definir i Como Entero;
+                        Definir j Como Entero;
+                        
+                        f <- 1;
+                        j <- 2;
+                        
+                        Repetir
+                            c <- 0;                         
+                            
+                            Si f < 12 Entonces
+                                Repetir
+                                    c <- c + 1;
+                                    
+                                    Si (c <= (20/2)- f + 1) o (c >= (20/2)+ f + 1) Entonces
+                                        Escribir Sin Saltar " ";
+                                    FinSi
+                                    
+                                    Si (c > (20/2)- f + 1) Y (c < (20/2)+ f + 1) Entonces
+                                        Escribir Sin Saltar "*";
+                                    FinSi
+                                    
+                                    Si c = 21 Entonces
+                                        Escribir " ";
+                                    FinSi
+                                    
+                                Hasta Que c = 21;                                
+                            FinSi
+                            
+                            Si f = 12 Entonces
+                                i <- 2;                                
+                                Repetir
+                                    c <- c + 1;
+                                    
+                                    Si (c <= (20/2)- i + 1) o (c >= (20/2)+ i + 1) Entonces
+                                        Escribir Sin Saltar " ";
+                                    FinSi
+                                    
+                                    Si (c > (20/2)- i + 1) Y (c < (20/2)+ i + 1) Entonces
+                                        Escribir Sin Saltar "*";
+                                    FinSi
+                                    
+                                    Si c = 21 Entonces
+                                        Escribir " ";
+                                    FinSi
+                                    
+                                Hasta Que c = 21;                                
+                            FinSi
+                            
+                            Si f > 12 Entonces                                
+                                Repetir
+                                    c <- c + 1;
+                                    
+                                    Si (c <= (20/2)- j + 1) o (c >= (20/2)+ j + 1) Entonces
+                                        Escribir Sin Saltar " ";
+                                    FinSi
+                                    
+                                    Si (c > (20/2)- j + 1) Y (c < (20/2)+ j + 1) Entonces
+                                        Escribir Sin Saltar "*";
+                                    FinSi
+                                    
+                                    Si c = 21 Entonces
+                                        Escribir " ";
+                                    FinSi                                    
+                                Hasta Que c = 21
+                                
+                                j <- j + 1;
+                            FinSi
+                            
+                            f <- f + 1;
+                        Hasta Que f = 16;	
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 4:</h3>
+                <p>"Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique
+                    por medio del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea
+                    crear la tabla del 5, entonces el resultado debería ser el siguiente:"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto4.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso tablaMultiplicar
+                        Definir digito Como Entero;
+                        Definir multiplicador Como Entero;
+                        Definir resultado Como Entero;
+                        Definir i Como Entero;
+                        
+                        Escribir 'Ingrese el digito de la tabla de multiplicar que quiere crear: ';
+                        Leer digito;
+                        
+                        Para i <- 1 Hasta 10 Hacer
+                            resultado <- i*digito;
+                            Escribir digito,' x ', i,' = ', resultado;
+                        FinPara
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 5:</h3>
+                <p>"Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee
+                    terminar dicho ciclo"</p>
+                <figure class="figure">
+                    <img class="img" src="../assets/imgPunto5.png" alt="Punto 1">
+                </figure>
+                <pre class="code">
+                <code>
+                    Proceso menuInfinito
+                        Definir opcion Como Entero;
+                        Definir nombre Como Caracter;
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Menú de usuario';
+                            Escribir '';
+                            Escribir '1. Captura nombre';
+                            Escribir '2. Saludar persona';
+                            Escribir '3. Confirmar salida del sistema';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:	
+                                    Escribir Sin Saltar 'Escribe nombre: ';
+                                    Leer nombre;
+                                2:				
+                                    Escribir 'Hola ', nombre;
+                                3:	
+                                    Escribir '¿Desea salir del sistema?';
+                                    De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 3;
+                    FinProceso
+                </code>
+            </pre>
+                <h3>Punto 6:</h3>
+                <p>"Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar
+                    contactos telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo,
+                    teléfono y organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el
+                    número no esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo
+                    requiere. Recuerde que el sistema debe terminar cuando el usuario así lo indique."</p>
+                <pre class="code">
+                <code>
+                    Proceso contactosTelefonicos	
+                        Definir nombre, nombre1, nombre2, nombre3 Como Caracter;;
+                        Definir organizacion, organizacion1, organizacion2, organizacion3 Como Caracter;
+                        Definir tel, tel1, tel2, tel3, opcion Como Entero;
+                        
+                        tel1 <- 0;
+                        tel2 <- 0;
+                        tel3 <- 0;
+                        
+                        Repetir
+                            Escribir "Bienvenido, Seleccione una opción:";
+                            Escribir "1. Añadir contacto";
+                            Escribir "2. Consultar contactos";
+                            Escribir "3. Eliminar contacto";
+                            Escribir "4. Salir del sistema";
+                            Leer opcion;
+                            
+                            Limpiar Pantalla;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir sin saltar "Número de telefono:";
+                                    Leer tel;
+                                    Si tel <> tel1 Y tel <> tel2 Y tel <> tel3 Entonces
+                                        Si tel1 = 0 Entonces
+                                            tel1 <- tel;
+                                            Escribir sin saltar "Nombre del contacto";
+                                            Leer nombre;
+                                            nombre1 <- nombre;
+                                            Escribir sin saltar "Organización del contacto";
+                                            Leer organizacion;
+                                            organizacion1 <- organizacion;
+                                            Limpiar Pantalla;
+                                            Escribir "Contacto almacenado correctamente";
+                                            Escribir "";
+                                        Sino Si tel2 = 0 Entonces
+                                                tel2 <- tel;
+                                                Escribir sin saltar "Nombre del contacto";
+                                                Leer nombre;
+                                                nombre2 <- nombre;
+                                                Escribir sin saltar "Organización del contacto";
+                                                Leer organizacion;
+                                                organizacion2 <- organizacion;
+                                                Limpiar Pantalla;
+                                                Escribir "Contacto almacenado correctamente";
+                                                Escribir "";
+                                            SiNo Si tel3 = 0 Entonces
+                                                    tel3 <- tel;
+                                                    Escribir sin saltar "Nombre del contacto";
+                                                    Leer nombre;
+                                                    nombre3 <- nombre;
+                                                    Escribir sin saltar "Organización del contacto";
+                                                    Leer organizacion;
+                                                    organizacion3 <- organizacion;
+                                                    Limpiar Pantalla;
+                                                    Escribir "Contacto almacenado correctamente";
+                                                    Escribir "";
+                                                SiNo
+                                                    Escribir "Solo se permite agregar (3) contactos, 
+                                                    elimine alguno para poder ingresar uno nuevo";
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    SiNo
+                                        Escribir "El numero de contacto ya existe";
+                                        Escribir "";
+                                    FinSi
+                                    
+                                2: 
+                                    Si tel1 <> 0 Entonces
+                                        Escribir "Contacto 1:";
+                                        Escribir "   ", "- Teléfono: " , tel1;
+                                        Escribir "   ", "- Nombre: " , nombre1;
+                                        Escribir "   ", "- Organización: " , organizacion1;
+                                    SiNo
+                                        Escribir "Contacto 1: Vacio";
+                                    FinSi
+                                    Si tel2 <> 0 Entonces
+                                        Escribir "Contacto 2:";
+                                        Escribir "   ", "- Teléfono: " , tel2;
+                                        Escribir "   ", "- Nombre: " , nombre2;
+                                        Escribir "   ", "- Organización: " , organizacion2;
+                                    SiNo
+                                        Escribir "Contacto 2: Vacio";
+                                    FinSi
+                                    Si tel3 <> 0 Entonces
+                                        Escribir "Contacto 3:";
+                                        Escribir "   ", "- Teléfono: " , tel3;
+                                        Escribir "   ", "- Nombre: " , nombre3;
+                                        Escribir "   ", "- Organización: " , organizacion3;
+                                    SiNo
+                                        Escribir "Contacto 3: Vacio";
+                                    FinSi
+                                    Escribir "";
+                                3: 
+                                    Escribir "Ingrese el número a eliminar";
+                                    Leer tel;
+                                    Si tel = tel1 Entonces
+                                        tel1 <- 0;
+                                        nombre1 <- "";
+                                        organizacion1 <- "";
+                                        Escribir "Contacto eliminado";
+                                    SiNo Si tel = tel2  Entonces
+                                            tel2 <- 0;
+                                            nombre2 <- "";
+                                            organizacion2 <- "";
+                                            Escribir "Contacto eliminado";
+                                        SiNo Si tel = tel3 Entonces
+                                                tel3 <- 0;
+                                                nombre3 <- "";
+                                                organizacion3 <- "";
+                                                Escribir "Contacto eliminado";
+                                            SiNo
+                                                Escribir "El número ingresado no existe";
+                                                Escribir "";
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                4:
+                                    Escribir "¿Desea salir del sistema?";
+                                De Otro Modo:
+                                    Escribir "No es una opción valida";				
+                            FinSegun		
+                        Hasta Que 	opcion = 4;	
+                    FinProceso             
+                </code>
+            </pre>
+                <h3>Punto 7:</h3>
+                <p>"El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del
+                    barrio y requiere una aplicación que permita registrar los vehículos que se cuidan en estas
+                    instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y
+                    marca, y los datos del cliente como son nombre completo y número de teléfono. Para cada vehículo se
+                    debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un
+                    vehículo se encuentra en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así
+                    lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos."</p>
+                <pre class="code">
+                <code>
+                    Proceso parqueaderoElGuardian
+                        Definir placa0, placa1 Como Caracter;
+                        Definir marca0 Como Caracter;
+                        Definir nombre0 Como Caracter;
+                        Definir retirar Como Caracter;
+                        Definir telefono0 Como Real;
+                        Definir opcion Como Entero;
+                        Definir cantidad Como Entero;
+                        Definir i Como Entero;
+                        
+                        Repetir
+                            Limpiar Pantalla;
+                            Escribir 'Bienvenido al parqueadero El Guardián';
+                            Escribir '';
+                            Escribir '1. Ingresar vehículo';
+                            Escribir '2. Consultar vehículo';
+                            Escribir '3. Retirar vehículo';
+                            Escribir '4. Salir del sistema';
+                            Leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:	
+                                    Escribir '¿Cuantos vehiculos va a ingresar?';
+                                    Leer cantidad;
+                                    
+                                    Si cantidad <= 5 Entonces
+                                        Para i<-1 Hasta cantidad Con Paso 1 Hacer
+                                            Escribir Sin Saltar 'Placa: ';
+                                            Leer placa0;
+                                            Escribir Sin Saltar 'Marca: ';
+                                            Leer marca0;
+                                            Escribir Sin Saltar 'Nombre propietario: ';
+                                            Leer nombre0;
+                                            Escribir Sin Saltar'Telefono: ';
+                                            Leer telefono0;
+                                            Escribir 'Se ingreso el vehículo';
+                                        FinPara
+                                    SiNo
+                                        Escribir 'Solo se pueden ingresar 5 vehículos';
+                                    FinSi			
+                                2:				
+                                    Escribir 'Ingrese la placa del vehículo para validar si se 
+                                    encuentra en el parqueadero';
+                                    Escribir 'Placa: ';
+                                    Leer placa1;
+                                    
+                                    Si placa0 = placa1 Entonces
+                                        Escribir 'El vehículo ', marca0,' a nombre de ', nombre0,' 
+                                        se encuentra en el parqueadero';
+                                    SiNo
+                                        Escribir 'El vehículo con placa ', placa1,' no se encuentra 
+                                        en el parqueadero';
+                                    FinSi
+                                3:	
+                                    Escribir Sin Saltar 'Ingresa la placa del vehículo a retirar: ';
+                                    Leer placa1;
+                                    
+                                    Si placa1 = placa0 Entonces
+                                        placa0 <- 'Retirado';
+                                        Escribir 'El vehiculo ', marca0,' a sido retirado';
+                                    SiNo
+                                        Escribir 'Error, la placa no coincide con los registros';
+                                    FinSi
+                                4:
+                                    Escribir '¿Desea salir del sistema?';
+                                De Otro Modo:
+                                    Escribir 'No es una opción valida';
+                            FinSegun
+                            Escribir 'Presiona enter para continuar';
+                            Esperar Tecla;
+                        Hasta Que opcion = 4;
+                    FinProceso                
+                </code>
+            </pre>
+                <h3>Punto 8:</h3>
+                <p>"La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes
+                    en los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con
+                    el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su
+                    ingreso al curso, consultar usuarios que hayan presentado el curso y resultados de la prueba del
+                    curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo
+                    indique. Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su
+                    totalidad."</p>
+                <pre class="code">
+                <code>
+                    Proceso escuelaElMaestro
+                        Definir prueba0, prueba1, prueba2, prueba3, prueba4, prueba5, prueba6, 
+                        prueba7, i Como Caracter;
+                        Definir nombre0, nombre1, nombre2, nombre3, nombre4, nombre5, nombre6, 
+                        nombre7 Como Caracter;
+                        Definir exa0, exa1, exa2, exa3, exa4, exa5, exa6, exa7 Como Caracter;
+                        Definir opcion Como Entero;
+                        
+                        prueba0<-''; prueba1<-'';
+                        prueba2<-''; prueba3<-'';
+                        prueba4<-''; prueba5<-'';
+                        prueba6<-''; prueba7<-'';
+                        nombre0<-''; nombre1<-'';
+                        nombre2<-''; nombre3<-'';
+                        nombre4<-''; nombre5<-'';
+                        nombre6<-''; nombre7<-'';
+                        exa0<-''; exa1<-''; exa2<-'';
+                        exa3<-''; exa4<-''; exa5<-'';
+                        exa6<-''; exa7<-'';
+                        i<-'';
+                        
+                        Mientras i<>'3' Hacer
+                            Escribir 'Escuela automovilística El Maestro';
+                            Escribir '1. Ingresar usuario';
+                            Escribir '2. Consultar resultados';
+                            Escribir '3. Salir del sistema';
+                            Leer i;
+                            Limpiar Pantalla;
+                            Si i='1' Entonces
+                                Escribir 'Solo puede ingresar 8 usuarios';
+                                Escribir 'Ingresa el número en el cual desea guardar el usuario';
+                                Escribir Sin Saltar '1-2-3-4-5-6-7-8: ';
+                                Leer opcion;
+                                Limpiar Pantalla;
+                                Segun opcion Hacer
+                                    1:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre0;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba0;
+                                        si prueba0='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';						
+                                            Leer exa0;
+                                        FinSi
+                                    2:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre1;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba1;
+                                        si prueba1='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa1;
+                                        FinSi
+                                    3:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre2;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba2;
+                                        si prueba2='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa2;
+                                        FinSi
+                                    4:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre3;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba3;
+                                        si prueba3='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa3;
+                                        FinSi
+                                    5:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre4;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba4;
+                                        si prueba4='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa4;
+                                        FinSi
+                                    6:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre5;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba5;
+                                        si prueba5='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa5;
+                                        FinSi
+                                    7:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre6;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba6;
+                                        si prueba6='1' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa6;
+                                        FinSi
+                                    8:
+                                        Escribir Sin Saltar 'Nombre: ';
+                                        Leer nombre7;
+                                        Escribir Sin Saltar '¿Presento prueba?, ingresa si o no ';
+                                        Leer prueba7;
+                                        si prueba7='si' Entonces
+                                            Escribir Sin Saltar 'Resultado del exámen ','ingresa 
+                                            Aprobado o No aprobado: ';	
+                                            Leer exa7;
+                                        FinSi
+                                    De Otro Modo:
+                                        Escribir 'Opción seleccionada no existe.';
+                                        Escribir '';
+                                FinSegun
+                            FinSi
+                            Si i='2' Entonces
+                                Si prueba0='si' Entonces
+                                    Escribir nombre0,', ',' el resultado es: ',exa0;
+                                FinSi
+                                Si prueba1='si' Entonces
+                                    Escribir nombre1,', ',' el resultado es: ',exa1;
+                                FinSi
+                                Si prueba2='si' Entonces
+                                    Escribir nombre2,', ',' el resultado es: ',exa2;
+                                FinSi
+                                Si prueba3='si' Entonces
+                                    Escribir nombre3,', ',' el resultado es: ',exa3;
+                                FinSi
+                                Si prueba4='si' Entonces
+                                    Escribir nombre4,', ',' el resultado es: ',exa4;
+                                FinSi
+                                Si prueba5='si' Entonces
+                                    Escribir nombre5,', ',' el resultado es: ',exa5;
+                                FinSi
+                                Si prueba6='si' Entonces
+                                    Escribir nombre6,', ',' el resultado es: ',exa6;
+                                FinSi
+                                Si prueba7='si' Entonces
+                                    Escribir nombre7,', ',' el resultado es: ',exa7;
+                                FinSi
+                            FinSi
+                        FinMientras
+                    FinProceso
+                </code>
+            </pre>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
